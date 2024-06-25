@@ -12,11 +12,15 @@ function buscarAmigo(amigos, nombre) {
   // Ej:
   //  var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
-
   // Tu código aca:
-  
+  let guardar_objeto = null;
+  amigos.forEach((objeto) => {
+    if (nombre === objeto[nombre]) guardar_objeto = objeto;
+  });
+
+  return guardar_objeto;
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscarAmigo
+module.exports = buscarAmigo;
